@@ -1,8 +1,6 @@
 body {
-  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
-  font-family: sans-serif;
-  padding: 20px;
-  color:rgb(128, 90, 43);
+
+  color:rgb(37, 32, 25);
   margin: 0; /* Add this to remove default body margin */
 }
 
