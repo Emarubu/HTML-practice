@@ -3,8 +3,12 @@ h1 {
     font-family: sans-serif ;
 }
 body{
-    background-color: bisque;
+    background-color: #ffffff00;
+    
+   
 }
+
+
 h1{
     font-family: 'Arial', sans-serif;
     font-size: 24px;
@@ -30,37 +34,30 @@ h1, h3{
 }
 
 .sizes, .spongesize, .rich-size{
-    padding-left: 300px;
+    padding-left: 250px;
+    padding-right: 5 px;
     margin: 30px;
+    
 }
 .cupsize{
     padding-left: 300px;
 }
 img {
-    padding-left : 300px;
+    padding-left : 370px;
     max-width: 100%;
+    max-height: 100%;
+    
+    
     
 }
+
+
 hr{
     height: 2px;
     border-color: black;
     background-color:rgb(110, 88, 112);
 }
-  .target {
-        font-size: 14px;
-        transition-property: font-size;
-        transition-duration: 4s;
-      }
-      
-      .target:hover {
-        font-size: 36px;
-      }
-
-      .body {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
+  
     /* Styles for medium screens */
     @media (max-width: 768px) {
         body {
@@ -75,7 +72,69 @@ hr{
         }
     }
 
-    
+    .card {
+        --bg: #f7f7f8;
+        --hover-bg: #FFE5F4;
+        --hover-text: #E50087;
+        max-width: 23ch;
+        text-align: center;
+        background: var(--bg);
+        padding: 1.5em;
+        padding-block: 1.8em;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+      }
+      
+      .card__body {
+        color: #464853;
+        line-height: 1.5em;
+        font-size: 1em;
+      }
+      
+      .card > :not(span) {
+        transition: .3s cubic-bezier(.6,.4,0,1);
+      }
+      
+      .card > strong {
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: -.035em;
+      }
+      
+      .card span {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--hover-text);
+        border-radius: 5px;
+        font-weight: bold;
+        top: 100%;
+        transition: all .3s cubic-bezier(.6,.4,0,1);
+      }
+      
+      .card:hover span {
+        top: 0;
+        font-size: 1.2em;
+      }
+      
+      .card:hover {
+        background: var(--hover-bg);
+      }
+      
+      .card:hover>div,.card:hover>strong {
+        opacity: 0;
+      }
     
     
     
